@@ -469,7 +469,7 @@
         .story-text p:first-child:first-letter {
             float: left;
             margin: .05em .12em 0 0;
-            color: var(--terracotta);
+            color: var(--green);
             font: 600 77px/.78 var(--serif)
         }
 
@@ -1142,6 +1142,23 @@
                 padding: 20px 0;
             }
 
+
+            @media (max-width: 620px) {
+
+                .story-text {
+                    max-width: 340px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                .story-text p {
+                    font-size: 14px;
+                    line-height: 1.65;
+                    margin-bottom: 22px;
+                }
+
+            }
+
             .memory div:last-child {
                 grid-column: span 2;
             }
@@ -1270,6 +1287,10 @@
                 line-height: 1.25;
             }
 
+            .eyebrow {
+                font-weight: 700;
+            }
+
             .bottom {
                 flex-direction: column;
                 align-items: stretch;
@@ -1355,11 +1376,12 @@
         </header>
         <main id="inicio">
             <section class="hero">
-                <div class="hero-copy"><span class="eyebrow">CONVITE</span>
+                <div class="hero-copy">
+                    <span class="eyebrow"><strong>CONVITE</strong></span>
                     <h1 class="display">Chá de <em>Panela</em></h1>
                     <p>Para celebrar o lar que estamos construindo juntos</p>
                     <div class="actions"><a class="primary" href="#historia">Entrar na nossa história →</a><a
-                            class="quiet" href="#loja">Visitar a lojinha</a></div>
+                            class="quiet" href="#loja">Nossa lista de presentes</a></div>
                 </div>
                 <div class="visual">
                     <div class="disc"></div>
@@ -1428,14 +1450,14 @@
     <div id="toastRoot"></div>
     <script>
         const products = [
-            ['Ajuda pra o primeiro passeio na lua de mel', 'memórias', 54, 'src/lua.png', '#e9d59e', '#ac7638'],
+            ['Ajuda pra o primeiro passeio na lua de mel', 'memórias', 84, 'src/lua.png', '#e9d59e', '#ac7638'],
             ['Só para dizer que não dei nada', 'memórias', 60, 'src/nada.jpeg', '#d6d8bd', '#54705b'],
-            ['Pau de macarrão pra noiva usar quando necessário', 'flores', 62, 'src/pau.jpeg', '#d8cf9a', '#60764c'],
+            ['Pau de macarrão pra noiva usar quando necessário', 'flores', 72, 'src/pau.jpeg', '#d8cf9a', '#60764c'],
             ['Ajude a noiva comprar mais umas plantinhas para casa ', '', 80, 'src/plant.png', '#ead391', '#8d7131'],
             ['Não importa o presente, importante é o valor', '', 100, 'src/2.png', '#e3d7bf', '#667354'],
             ['Massagem para o noivo relaxar antes de ver a fatura do cartão', '', 120, 'src/1.png', '#e1c9bf', '#9d5949'],
             ['Capacete para o noivo se defender do pau de macarrão', '', 130, 'src/capacete.jpeg', '#eee2c8', '#b65d46'],
-            ['Cobertor pra noiva estar sempre coberta de razão', '', 174, 'src/rzz.png', '#e5d9c7', '#af7941'],
+            ['Cobertor pra noiva estar sempre coberta de razão', '', 90, 'src/rzz.png', '#e5d9c7', '#af7941'],
             ['Cobertor para o noivo estar coberto de razão', '', 208, 'src/rz.png', '#efe2bf', '#b65d46'],
             ['Ajude à pagar o condominio', '', 235, 'src/aluguel.png', '#e7c7ad', '#9c573d'],
             ['Ajuda para pagar a fatura do cartão da noiva', 'presentes', 300, 'src/noiva.png', '#edc8b7', '#b65d46'],
@@ -1443,12 +1465,12 @@
             ['Cota para perguntar quando vem o próximo filho', '', 1200, 'src/3.jpeg', '#e7d4aa', '#8e7a3a'],
             ['Dei o melhor presente', '', 1500, 'src/gift.png', '#e3d7bf', '#667354'],
             ['EU SOU RIIIIIIICA', '', 2000, 'src/rica.jpeg', '#e3d7bf', '#667354'],
-            ['Potes para guardar tudo. Porque aqui nada se perde. Nem corrida, nem discussão', '', 100, 'src/7.jpeg', '#e3d7bf', '#667354'],
+            ['Potes para guardar tudo. Porque aqui nada se perde. Nem corrida, nem discussão', '', 150, 'src/7.jpeg', '#e3d7bf', '#667354'],
             ['Jogo de toalhas. Para casal sair do banho e não molhar a casa', '', 135, 'src/4.jpeg', '#e3d7bf', '#667354'],
-            ['Pix do amor. Pequeno para você, gigante para a nossa casa', '', 150, 'src/6.jpeg', '#e3d7bf', '#667354'],
+            ['Pix do amor. Pequeno para você, gigante para a nossa casa', '', 250, 'src/6.jpeg', '#e3d7bf', '#667354'],
             ['Panelas do amor, para conquistar o noivo pela barriga', '', 350, 'src/8.jpeg', '#e3d7bf', '#667354'],
-            ['Escrever qualquer coisa', '', 350, 'src/rica.jpeg', '#e3d7bf', '#667354'],
-            ['Escrever aqui qualquer coisa.', '', 350, 'src/rica.jpeg', '#e3d7bf', '#667354'],
+            ['Taças do amor', '', 130, 'src/rica.jpeg', '#e3d7bf', '#667354'],
+            ['Jantar Romântico.', '', 400, 'src/rica.jpeg', '#e3d7bf', '#667354'],
 
 
         ].map((p, i) => ({
