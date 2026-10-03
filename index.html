@@ -946,474 +946,589 @@
             }
         }
 
-       /* =========================
+        /* =========================
    RESPONSIVIDADE PARA CELULAR
    ========================= */
 
-@media (max-width: 768px) {
+        @media (max-width: 768px) {
 
-    /* GERAL */
-    html {
-        overflow-x: hidden;
-    }
+            /* GERAL */
+            html {
+                overflow-x: hidden;
+            }
 
-    body {
-        overflow-x: hidden;
-    }
+            body {
+                overflow-x: hidden;
+            }
 
-    .header,
-    .hero,
-    .memory,
-    .story,
-    .shop,
-    .footer {
-        width: calc(100% - 28px);
-    }
+            .header,
+            .hero,
+            .memory,
+            .story,
+            .shop,
+            .footer {
+                width: calc(100% - 28px);
+            }
 
 
-    /* =========================
+            /* =========================
        HEADER
        ========================= */
 
-    .header {
-        padding: 13px 0;
-    }
+            .header {
+                padding: 13px 0;
+            }
 
-    .brand {
-        gap: 8px;
-    }
+            .brand {
+                gap: 8px;
+            }
 
-    .mark {
-        width: 38px;
-        height: 38px;
-        font-size: 19px;
-    }
+            .mark {
+                width: 38px;
+                height: 38px;
+                font-size: 19px;
+            }
 
-    .brand-name {
-        font-size: 16px;
-    }
+            .brand-name {
+                font-size: 16px;
+            }
 
-    .brand-note {
-        display: none;
-    }
+            .brand-note {
+                display: none;
+            }
 
-    .mobile-toggle {
-        display: block;
-        font-size: 22px;
-        padding: 5px;
-    }
+            .mobile-toggle {
+                display: block;
+                font-size: 22px;
+                padding: 5px;
+            }
 
-    .nav {
-        position: absolute;
-        top: 62px;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        min-width: 190px;
-        padding: 7px;
-        border: 1px solid var(--line);
-        background: var(--card);
-        box-shadow: 0 18px 45px rgba(88,63,33,.11);
-        z-index: 100;
-    }
+            .nav {
+                position: absolute;
+                top: 62px;
+                right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                min-width: 190px;
+                padding: 7px;
+                border: 1px solid var(--line);
+                background: var(--card);
+                box-shadow: 0 18px 45px rgba(88, 63, 33, .11);
+                z-index: 100;
+            }
 
-    .nav.open {
-        display: flex;
-    }
+            .nav.open {
+                display: flex;
+            }
 
-    .nav a {
-        padding: 13px;
-        font-size: 13px;
-    }
+            .nav a {
+                padding: 13px;
+                font-size: 13px;
+            }
 
-    .cart-button {
-        margin: 4px 0 0;
-        justify-content: center;
-        min-height: 42px;
-    }
+            .cart-button {
+                margin: 4px 0 0;
+                justify-content: center;
+                min-height: 42px;
+            }
 
 
-    /* =========================
+            /* =========================
        HERO
        ========================= */
 
-    .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        gap: 35px;
-        padding-top: 25px;
-        padding-bottom: 60px;
-    }
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                gap: 35px;
+                padding-top: 25px;
+                padding-bottom: 60px;
+            }
 
-    .hero-copy {
-        padding-bottom: 0;
-    }
+            .hero-copy {
+                padding-bottom: 0;
+            }
 
-    .display {
-        margin: 20px 0 24px;
-        font-size: clamp(48px, 15vw, 76px);
-        line-height: .9;
-        letter-spacing: -3px;
-    }
+            .display {
+                margin: 20px 0 24px;
+                font-size: clamp(48px, 15vw, 76px);
+                line-height: .9;
+                letter-spacing: -3px;
+            }
 
-    .hero-copy > p {
-        max-width: 340px;
-        font-size: 15px;
-        line-height: 1.6;
-    }
+            .hero-copy>p {
+                max-width: 340px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
 
-    .actions {
-        flex-direction: column;
-        align-items: stretch;
-        margin-top: 25px;
-    }
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+                margin-top: 25px;
+            }
 
-    .primary,
-    .quiet {
-        width: 100%;
-        min-height: 48px;
-    }
+            .primary,
+            .quiet {
+                width: 100%;
+                min-height: 48px;
+            }
 
-    .hero-note {
-        margin-top: 35px;
-    }
+            .hero-note {
+                margin-top: 35px;
+            }
 
 
-    /* =========================
+            /* =========================
        FOTO
        ========================= */
 
-    .visual {
-        width: 100%;
-        margin: auto;
-    }
+            .visual {
+                width: 100%;
+                margin: auto;
+            }
 
-    .photo-frame img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-    }
+            .photo-frame img {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
 
-    .caption {
-        right: 5px;
-        bottom: -18px;
-        width: 155px;
-        padding: 12px 13px;
-    }
+            .caption {
+                right: 5px;
+                bottom: -18px;
+                width: 155px;
+                padding: 12px 13px;
+            }
 
-    .caption strong {
-        font-size: 14px;
-    }
+            .caption strong {
+                font-size: 14px;
+            }
 
-    .disc {
-        top: -30px;
-        right: -15px;
-        width: 90px;
-        height: 90px;
-    }
+            .disc {
+                top: -30px;
+                right: -15px;
+                width: 90px;
+                height: 90px;
+            }
 
 
-    /* =========================
+            /* =========================
        MEMÓRIAS
        ========================= */
 
-    .memory {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px 0;
-    }
+            .memory {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px 0;
+            }
 
-    .memory div:last-child {
-        grid-column: span 2;
-    }
+            .memory div:last-child {
+                grid-column: span 2;
+            }
 
-    .memory strong {
-        font-size: 16px;
-    }
+            .memory strong {
+                font-size: 16px;
+            }
 
 
-    /* =========================
+            /* =========================
        HISTÓRIA
        ========================= */
 
-    .story {
-        padding-top: 65px;
-        padding-bottom: 70px;
-    }
+            .story {
+                padding-top: 65px;
+                padding-bottom: 70px;
+            }
 
-    .story-intro,
-    .story-grid {
-        grid-template-columns: 1fr;
-    }
+            .story-intro,
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .story-intro {
-        gap: 28px;
-        padding-bottom: 55px;
-    }
+            .story-intro {
+                gap: 28px;
+                padding-bottom: 55px;
+            }
 
-    .section-title {
-        font-size: clamp(38px, 11vw, 56px);
-        line-height: .95;
-        letter-spacing: -2px;
-    }
+            .section-title {
+                font-size: clamp(38px, 11vw, 56px);
+                line-height: .95;
+                letter-spacing: -2px;
+            }
 
-    .body-copy {
-        font-size: 15px;
-        line-height: 1.7;
-    }
+            .body-copy {
+                font-size: 15px;
+                line-height: 1.7;
+            }
 
-    /* TEXTO DA HISTÓRIA */
-    .story-text {
-        width: 88%;
-        max-width: 340px;
-        margin: 0 auto;
-        text-align: center;
-    }
+            /* TEXTO DA HISTÓRIA */
+            .story-text {
+                width: 88%;
+                max-width: 340px;
+                margin: 0 auto;
+                text-align: center;
+            }
 
-    .story-text p {
-        font-size: 13.5px;
-        line-height: 1.7;
-        margin: 0 0 22px;
-    }
+            .story-text p {
+                font-size: 13.5px;
+                line-height: 1.7;
+                margin: 0 0 22px;
+            }
 
-    .story-text p:first-child:first-letter {
-        font-size: 55px;
-    }
+            .story-text p:first-child:first-letter {
+                font-size: 55px;
+            }
 
 
-    /* =========================
+            /* =========================
        DESTAQUE
        ========================= */
 
-    .callout {
-        max-width: 100%;
-        padding: 25px;
-    }
+            .callout {
+                max-width: 100%;
+                padding: 25px;
+            }
 
-    .callout p {
-        font-size: 23px;
-    }
+            .callout p {
+                font-size: 23px;
+            }
 
 
-    /* =========================
+            /* =========================
        MOMENTOS
        ========================= */
 
-    .moments {
-        grid-template-columns: 1fr;
-        margin-top: 55px;
-    }
+            .moments {
+                grid-template-columns: 1fr;
+                margin-top: 55px;
+            }
 
-    .moment,
-    .moment + .moment {
-        padding: 22px 0;
-        border-left: 0;
-    }
+            .moment,
+            .moment+.moment {
+                padding: 22px 0;
+                border-left: 0;
+            }
 
-    .moment + .moment {
-        border-top: 1px solid rgba(56,41,31,.13);
-    }
+            .moment+.moment {
+                border-top: 1px solid rgba(56, 41, 31, .13);
+            }
 
 
-    /* =========================
+            /* =========================
        LOJINHA
        ========================= */
 
-    .shop {
-        padding-top: 65px;
-        padding-bottom: 70px;
-    }
+            .shop {
+                padding-top: 65px;
+                padding-bottom: 70px;
+            }
 
-    .shop-heading {
-        display: block;
-        padding-bottom: 30px;
-    }
+            .shop-heading {
+                display: block;
+                padding-bottom: 30px;
+            }
 
-    .shop-heading-copy {
-        margin-top: 16px;
-        font-size: 13px;
-    }
+            .shop-heading-copy {
+                margin-top: 16px;
+                font-size: 13px;
+            }
 
-    .toolbar {
-        margin-top: 20px;
-        margin-bottom: 14px;
-    }
+            .toolbar {
+                margin-top: 20px;
+                margin-bottom: 14px;
+            }
 
 
-    /* =========================
+            /* =========================
        PRODUTOS
        ========================= */
 
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
 
-    .product {
-        min-height: 0;
-    }
+            .product {
+                min-height: 0;
+            }
 
-    .art {
-        height: 175px;
-    }
+            .art {
+                height: 175px;
+            }
 
-    .symbol {
-        width: 135px;
-        height: 135px;
-        object-fit: contain;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
-    }
+            .symbol {
+                width: 135px;
+                height: 135px;
+                object-fit: contain;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+            }
 
-    .info {
-        padding: 13px 12px 14px;
-    }
+            .info {
+                padding: 13px 12px 14px;
+            }
 
-    .category {
-        font-size: 8px;
-    }
+            .category {
+                font-size: 8px;
+            }
 
-    .product-name {
-        min-height: 0;
-        margin: 6px 0 12px;
-        font-size: 14px;
-        line-height: 1.25;
-    }
+            .product-name {
+                min-height: 0;
+                margin: 6px 0 12px;
+                font-size: 14px;
+                line-height: 1.25;
+            }
 
-    .bottom {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 9px;
-    }
+            .bottom {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 9px;
+            }
 
-    .price {
-        font-size: 13px;
-    }
+            .price {
+                font-size: 13px;
+            }
 
-    .add {
-        width: 100%;
-        min-height: 38px;
-        padding: 8px;
-        font-size: 10px;
-    }
+            .add {
+                width: 100%;
+                min-height: 38px;
+                padding: 8px;
+                font-size: 10px;
+            }
+
+            /* =========================
+   TELA DE ENTRADA + MÚSICA
+   ========================= */
+
+            .music-start {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: var(--paper);
+                padding: 25px;
+
+                transition: opacity .6s ease, visibility .6s ease;
+            }
+
+            .music-start.hide {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .music-start-box {
+                width: min(100%, 420px);
+                text-align: center;
+            }
+
+            .music-heart {
+                display: block;
+                font-size: 55px;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+
+            .music-start-box h2 {
+                margin: 0 0 12px;
+
+                font: 600 34px/.95 var(--serif);
+                letter-spacing: -1px;
+            }
+
+            .music-start-box p {
+                margin: 0 auto 28px;
+
+                max-width: 280px;
+
+                font: 14px/1.6 var(--sans);
+                color: var(--muted);
+            }
+
+            #startSite {
+                border: 1px solid var(--ink);
+                background: var(--ink);
+                color: white;
+
+                padding: 14px 30px;
+
+                font: 600 12px var(--sans);
+                letter-spacing: .5px;
+
+                cursor: pointer;
+
+                transition: transform .2s ease, opacity .2s ease;
+            }
+
+            #startSite:hover {
+                transform: translateY(-2px);
+            }
+
+            @media (max-width: 620px) {
+
+                .music-start {
+                    padding: 20px;
+                }
+
+                .music-heart {
+                    font-size: 48px;
+                }
+
+                .music-start-box h2 {
+                    font-size: 29px;
+                }
+
+                .music-start-box p {
+                    font-size: 13px;
+                }
+
+                #startSite {
+                    width: 100%;
+                    min-height: 48px;
+                }
+            }
 
 
-    /* =========================
+            /* =========================
        CARRINHO
        ========================= */
 
-    .drawer {
-        width: 100%;
-        padding: 20px;
-    }
+            .drawer {
+                width: 100%;
+                padding: 20px;
+            }
 
-    .drawer h2 {
-        font-size: 30px;
-    }
+            .drawer h2 {
+                font-size: 30px;
+            }
 
-    .cart-items {
-        gap: 12px;
-    }
+            .cart-items {
+                gap: 12px;
+            }
 
-    .cart-item {
-        width: 100%;
-    }
+            .cart-item {
+                width: 100%;
+            }
 
-    .cart-name {
-        font-size: 14px;
-        line-height: 1.3;
-    }
+            .cart-name {
+                font-size: 14px;
+                line-height: 1.3;
+            }
 
 
-    /* =========================
+            /* =========================
        PIX
        ========================= */
 
-    .pix-qrcode {
-        width: 165px;
-        height: 165px;
-    }
+            .pix-qrcode {
+                width: 165px;
+                height: 165px;
+            }
 
-    .empty {
-        padding: 25px 10px;
-    }
+            .empty {
+                padding: 25px 10px;
+            }
 
-    .empty h3 {
-        font-size: 23px;
-    }
+            .empty h3 {
+                font-size: 23px;
+            }
 
 
-    /* =========================
+            /* =========================
        RODAPÉ
        ========================= */
 
-    .footer {
-        flex-direction: column;
-        gap: 12px;
-        padding-bottom: 35px;
-    }
-}
+            .footer {
+                flex-direction: column;
+                gap: 12px;
+                padding-bottom: 35px;
+            }
+        }
 
 
-/* =========================
+        /* =========================
    CELULARES MUITO PEQUENOS
    ========================= */
 
-@media (max-width: 380px) {
+        @media (max-width: 380px) {
 
-    .display {
-        font-size: 46px;
-    }
+            .display {
+                font-size: 46px;
+            }
 
-    .section-title {
-        font-size: 38px;
-    }
+            .section-title {
+                font-size: 38px;
+            }
 
-    .grid {
-        gap: 8px;
-    }
+            .grid {
+                gap: 8px;
+            }
 
-    .art {
-        height: 145px;
-    }
+            .art {
+                height: 145px;
+            }
 
-    .symbol {
-        width: 110px;
-        height: 110px;
-    }
+            .symbol {
+                width: 110px;
+                height: 110px;
+            }
 
-    .info {
-        padding: 11px 9px 12px;
-    }
+            .info {
+                padding: 11px 9px 12px;
+            }
 
-    .product-name {
-        font-size: 13px;
-    }
+            .product-name {
+                font-size: 13px;
+            }
 
-    .price {
-        font-size: 12px;
-    }
+            .price {
+                font-size: 12px;
+            }
 
-    .add {
-        font-size: 9px;
-    }
+            .add {
+                font-size: 9px;
+            }
 
-    .story-text {
-        width: 92%;
-    }
+            .story-text {
+                width: 92%;
+            }
 
-    .story-text p {
-        font-size: 13px;
-        line-height: 1.65;
-    }
-}
+            .story-text p {
+                font-size: 13px;
+                line-height: 1.65;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="music-start" id="musicStart">
+        <div class="music-start-box">
+            <span class="music-heart">♡</span>
+
+            <h2>Bem-vindos ao nosso cantinho</h2>
+
+            <p>Entre e deixe a nossa música tocar.</p>
+
+            <button id="startSite">
+                Entrar ♡
+            </button>
+        </div>
+    </div>
+
+    <iframe id="youtubeMusic" width="0" height="0"
+        src="https://youtu.be/bVSFquyGQYk?list=RDbVSFquyGQYk" title="Nossa música"
+        frameborder="0" allow="autoplay; encrypted-media"
+        style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;">
+    </iframe>
     <div class="shell">
         <header class="header">
             <a class="brand" href="#inicio"><span class="mark">❤︎</span><span><span class="brand-name">Yuri <i>&</i>
@@ -1429,13 +1544,13 @@
                     <span class="eyebrow"><strong>CONVITE</strong></span>
                     <h1 class="display">Chá de <em>Panela</em></h1>
                     <p>Para celebrar o lar que estamos construindo juntos</p>
-                    <div class="actions"><a class="primary" href="#historia">Leia nossa história →</a><a
-                            class="quiet" href="#loja">Nossa lista de presentes</a></div>
+                    <div class="actions"><a class="primary" href="#historia">Leia nossa história →</a><a class="quiet"
+                            href="#loja">Nossa lista de presentes</a></div>
                 </div>
                 <div class="visual">
                     <div class="disc"></div>
-                    <figure class="photo-frame"><img
-src="src/10.jpeg"                            alt="Klicya e Yuri caminhando juntos em um campo de girassóis">
+                    <figure class="photo-frame"><img src="src/10.jpeg"
+                            alt="Klicya e Yuri caminhando juntos em um campo de girassóis">
                         <figcaption class="caption"><strong>Outubro, 2024</strong>um convite para comer peixe que deu
                             match.</figcaption>
                     </figure>
@@ -1450,7 +1565,7 @@ src="src/10.jpeg"                            alt="Klicya e Yuri caminhando junto
         <main id="historia" class="story">
             <section class="story-intro">
                 <div><span class="eyebrow">capítulo um · ainda acontecendo</span>
-                    <h2 class="section-title">Uma vida feita de <em>detalhes.</em></h2>
+                    <h2 class="section-title">Uma vida feita de <em>detalhes</em></h2>
                 </div>
                 <p class="body-copy">Não foi um raio, nem uma cena de filme. Foi mais bonito: uma coleção de dias comuns
                     que, juntos, ganharam um brilho diferente.</p>
@@ -1495,7 +1610,16 @@ src="src/10.jpeg"                            alt="Klicya e Yuri caminhando junto
     </div>
     <div id="cartRoot"></div>
     <div id="toastRoot"></div>
+
+
+
     <script>
+        const musicStart = document.getElementById('musicStart');
+        const startSite = document.getElementById('startSite');
+
+        startSite.addEventListener('click', () => {
+            musicStart.classList.add('hide');
+        });
         const products = [
             ['Ajuda pra o primeiro passeio na lua de mel', 'memórias', 84, 'src/lua.png', '#e9d59e', '#ac7638'],
             ['Só para dizer que não dei nada', 'memórias', 60, 'src/nada.jpeg', '#d6d8bd', '#54705b'],
@@ -1516,8 +1640,8 @@ src="src/10.jpeg"                            alt="Klicya e Yuri caminhando junto
             ['Jogo de toalhas. Para casal sair do banho e não molhar a casa', '', 135, 'src/4.jpeg', '#e3d7bf', '#667354'],
             ['Pix do amor. Pequeno para você, gigante para a nossa casa', '', 250, 'src/6.jpeg', '#e3d7bf', '#667354'],
             ['Panelas do amor, para conquistar o noivo pela barriga', '', 350, 'src/8.jpeg', '#e3d7bf', '#667354'],
-            ['Taças do amor', '', 130, 'src/rica.jpeg', '#e3d7bf', '#667354'],
-            ['Jantar Romântico.', '', 400, 'src/rica.jpeg', '#e3d7bf', '#667354'],
+            ['Taças do amor', '', 130, 'src/taça.jpeg', '#e3d7bf', '#667354'],
+            ['Jantar Romântico.', '', 400, 'src/Jantar.jpeg', '#e3d7bf', '#667354'],
 
 
         ].map((p, i) => ({
