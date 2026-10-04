@@ -1397,6 +1397,10 @@
             }
 
 
+
+
+
+
             /* =========================
    LOCALIZAÇÃO — CELULAR
 ========================= */
@@ -1685,6 +1689,223 @@
                 font-size: 13px;
                 line-height: 1.65;
             }
+
+
+        }
+
+
+        /* =========================
+   ROTEIRO — FOLHA DE PAPEL
+========================= */
+
+        .roteiro {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 20px;
+            box-sizing: border-box;
+        }
+
+        .roteiro-papel {
+            width: min(680px, 100%);
+            padding: 55px 65px;
+            box-sizing: border-box;
+
+            /* aparência de papel */
+            background: #fffdf8;
+
+            /* sombra delicada */
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.10),
+                0 3px 8px rgba(0, 0, 0, 0.06);
+
+            position: relative;
+
+            /* leve irregularidade visual */
+            transform: rotate(-0.3deg);
+
+            /* borda sutil */
+            border: 1px solid rgba(120, 100, 80, 0.12);
+        }
+
+        /* pequeno detalhe no topo */
+
+        .roteiro-topo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+
+            margin-bottom: 12px;
+
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #8f7967;
+        }
+
+        .roteiro-topo span {
+            font-size: 11px;
+        }
+
+        .roteiro-topo small {
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        /* título */
+
+        .roteiro-papel h2 {
+            text-align: center;
+
+            margin: 0 0 12px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 28px;
+            font-weight: 400;
+
+            font-style: italic;
+
+            color: #5d4b40;
+        }
+
+        /* linha decorativa */
+
+        .roteiro-linha {
+            width: 70px;
+            height: 1px;
+
+            margin: 0 auto 38px;
+
+            background: #b9a18c;
+        }
+
+
+        /* cada item */
+
+        .roteiro-item {
+            display: grid;
+            grid-template-columns: 125px 1fr;
+            gap: 25px;
+
+            padding: 17px 0;
+
+            border-bottom: 1px solid rgba(120, 100, 80, 0.13);
+        }
+
+        /* último item sem linha */
+
+        .roteiro-item:last-of-type {
+            border-bottom: none;
+        }
+
+
+        /* horário */
+
+        .roteiro-hora {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 13px;
+
+            color: #8c7665;
+
+            letter-spacing: 0.5px;
+
+            padding-top: 2px;
+
+            white-space: nowrap;
+        }
+
+
+        /* título do evento */
+
+        .roteiro-item h3 {
+            margin: 0 0 5px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+
+            font-weight: 500;
+
+            color: #514239;
+        }
+
+
+        /* descrição */
+
+        .roteiro-item p {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 12.5px;
+
+            line-height: 1.6;
+
+            color: #7c6c60;
+
+            font-style: italic;
+        }
+
+
+        /* detalhe final */
+
+        .roteiro-final {
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #a58c77;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media (max-width: 600px) {
+
+            .roteiro {
+                padding: 45px 15px;
+            }
+
+            .roteiro-papel {
+                padding: 40px 28px;
+            }
+
+            .roteiro-papel h2 {
+                font-size: 24px;
+            }
+
+            .roteiro-item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+                padding: 15px 0;
+            }
+
+            .roteiro-hora {
+                font-size: 12px;
+            }
+
+            .roteiro-item h3 {
+                font-size: 15px;
+            }
+
+            .roteiro-item p {
+                font-size: 12px;
+            }
+
+            .mensagem {
+                font-size: 15px
+            }
+        }
+
+        .mensagem {
+            font-size: 15px
         }
     </style>
 </head>
@@ -1697,10 +1918,11 @@
             <button class="mobile-toggle" id="menuToggle" aria-label="Abrir navegação">☰</button>
             <nav class="nav" id="nav"><a href="#inicio">Início</a>
                 <a href="#localizacao">Localização do Evento</a>
-                  <a href="#localizacao">Roteiro da noite</a>
-                
-                <a href="#historia">A história</a><a href="#loja">Lista de presente</a><button class="cart-button" id="openCart"><span>Cesta do casal</span><span class="count"
-                        id="cartCount">0</span></button></nav>
+                <a href="#localizacao">Roteiro da noite</a>
+
+                <a href="#historia">Nossa história</a><a href="#loja">Lista de presente</a><button class="cart-button"
+                    id="openCart"><span>Cesta do casal</span><span class="count" id="cartCount">0</span></button>
+            </nav>
         </header>
         <main id="inicio">
             <section class="hero">
@@ -1763,38 +1985,100 @@
         </main>
         <main id="loja" class="shop">
             <section class="shop-heading">
-                    <h2 class="section-title">A nossa <em>Lista de presentes</em></h2>
+                <h2 class="section-title">A nossa <em>Lista de presentes</em></h2>
+    </div>
+
+    </section>
+    <section class="grid" id="products" aria-label="Produtos da lista de presentes"></section>
+    </main>
+
+
+
+    <main id="localizacao" class="location">
+
+        <section class="location-heading">
+            <div>
+                <span class="eyebrow">onde vamos celebrar</span>
+
+                <h2 class="section-title">
+                    Roteiro da <em>noite</em>
+                </h2>
+            </div>
+
+            <p class="body-copy">
+                Preparamos tudo com muito carinho para que esse momento
+                seja leve, divertido e cheio de boas memórias.
+            </p>
+        </section>
+
+        <!-- ROTEIRO -->
+        <section class="roteiro">
+
+            <div class="roteiro-papel">
+
+                <div class="roteiro-topo">
+                    <span>✦</span>
+                    <small>ROTEIRO DA NOITE</small>
+                    <span>✦</span>
                 </div>
 
-            </section>
-            <section class="grid" id="products" aria-label="Produtos da lista de presentes"></section>
-        </main>
+                <h2>Uma noite para celebrar</h2>
 
-        <main id="localizacao" class="location">
-            <section class="location-heading">
-                <div>
-                    <span class="eyebrow">onde vamos celebrar</span>
+                <div class="roteiro-linha"></div>
 
-                    <h2 class="section-title">
-                    </h2>
-                </div>
-            </section>
-
-            <section class="location-content">
-                <div class="location-info">
-
-
-                    <div class="location-map">
-                        <iframe
-                            src="https://www.google.com/maps?q=Av.+Frederico+Baird,+2990,+Ponta+Negra,+Manaus,+AM,+69037-144&output=embed" " width="
-                            100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                <div class="roteiro-item">
+                    <span class="roteiro-hora">19h — 19h40</span>
+                    <div>
+                        <h3>Recepção dos convidados</h3>
+                        <p>Recepção dos convidados + fotos</p>
                     </div>
+                </div>
 
-            </section>
-        </main>
-        <footer class="footer"><em>Será um prazer ter você conosco!</em></footer>
+                <div class="roteiro-item">
+                    <span class="roteiro-hora">19h40 — 20h45</span>
+                    <div>
+                        <h3>Brincadeiras</h3>
+                        <p>Brincadeiras e prendas</p>
+                    </div>
+                </div>
+
+                <div class="roteiro-item">
+                    <span class="roteiro-hora">20h45 — 21h00</span>
+                    <div>
+                        <h3>Momento especial</h3>
+                        <p>Discurso dos noivos, agradecimentos e falas especiais</p>
+                    </div>
+                </div>
+
+                <div class="roteiro-item">
+                    <span class="roteiro-hora">21h00 — 21h50</span>
+                    <div>
+                        <h3>Jantar</h3>
+                        <p>Um momento para celebrar, conversar e aproveitar juntos.</p>
+                    </div>
+                </div>
+
+                <div class="roteiro-item">
+                    <span class="roteiro-hora">22h</span>
+                    <div>
+                        <h3>Encerramento</h3>
+                        <p>Entrega de lembrancinhas e despedida dos convidados.</p>
+                    </div>
+                </div>
+
+                <div class="roteiro-final">
+                    <span class="mensagem">Pedimos que não se atrasem, para aproveitarmos cada momento juntos.</span>
+                    <br>
+                    <span>♡</span>
+                </div>
+
+            </div>
+            ```
+
+        </section>
+
+    </main>
+    <footer class="footer"><em>Será um prazer ter você conosco!</em></footer>
     </div>
     <div id="cartRoot"></div>
     <div id="toastRoot"></div>
