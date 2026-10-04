@@ -405,7 +405,7 @@
 
         #products {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
 
@@ -1218,7 +1218,6 @@
 
 
             /* =========================
-       LOJINHA
        ========================= */
 
             .shop {
@@ -1696,8 +1695,11 @@
             <a class="brand" href="#inicio"><span class="mark">❤︎</span><span><span class="brand-name">Yuri <i>&</i>
                         Klicya</span></span></a>
             <button class="mobile-toggle" id="menuToggle" aria-label="Abrir navegação">☰</button>
-            <nav class="nav" id="nav"><a href="#inicio">Início</a><a href="#historia">A história</a><a href="#loja">A
-                    lojinha</a><button class="cart-button" id="openCart"><span>Cesta do casal</span><span class="count"
+            <nav class="nav" id="nav"><a href="#inicio">Início</a>
+                <a href="#localizacao">Localização do Evento</a>
+                  <a href="#localizacao">Roteiro da noite</a>
+                
+                <a href="#historia">A história</a><a href="#loja">Lista de presente</a><button class="cart-button" id="openCart"><span>Cesta do casal</span><span class="count"
                         id="cartCount">0</span></button></nav>
         </header>
         <main id="inicio">
@@ -1709,6 +1711,7 @@
                     <div class="actions"><a class="primary" href="#historia">Leia nossa história →</a><a class="quiet"
                             href="#loja">Nossa lista de presentes</a>
 
+                        <a class="quiet" href="#localizacao">Roteiro da noite</a>
                         <a class="quiet" href="#localizacao">Local do evento</a>
                     </div>
                 </div>
@@ -1717,7 +1720,7 @@
                     <figure class="photo-frame"><img src="src/10.jpeg"
                             alt="Klicya e Yuri caminhando juntos em um campo de girassóis">
                         <figcaption class="caption"><strong>Outubro, 2024</strong>um convite para comer peixe que deu
-                            match.</figcaption>
+                            match</figcaption>
                     </figure>
                 </div>
             </section>
@@ -1760,12 +1763,11 @@
         </main>
         <main id="loja" class="shop">
             <section class="shop-heading">
-                <div><span class="eyebrow">objetos com memória</span>
                     <h2 class="section-title">A nossa <em>Lista de presentes</em></h2>
                 </div>
 
             </section>
-            <section class="grid" id="products" aria-label="Produtos da lojinha"></section>
+            <section class="grid" id="products" aria-label="Produtos da lista de presentes"></section>
         </main>
 
         <main id="localizacao" class="location">
@@ -1792,8 +1794,7 @@
 
             </section>
         </main>
-        <footer class="footer"><span>feito à mão, com tempo e carinho · 2024</span><em>para guardar os dias
-                bonitos.</em></footer>
+        <footer class="footer"><em>Será um prazer ter você conosco!</em></footer>
     </div>
     <div id="cartRoot"></div>
     <div id="toastRoot"></div>
@@ -1810,7 +1811,7 @@
             ['Cobertor pra noiva estar sempre coberta de razão', '', 90, 'src/rzz.png', '#e5d9c7', '#af7941'],
             ['Não importa o presente, importante é o valor', '', 100, 'src/2.png', '#e3d7bf', '#667354'],
             ['Massagem para o noivo relaxar antes de ver a fatura do cartão', '', 120, 'src/1.png', '#e1c9bf', '#9d5949'],
-            ['Taças do amor', '', 130, 'src/taça.jpg', '#e3d7bf', '#667354'],
+            ['Taças do amor p/ comemorar o casamento', '', 130, 'src/taça.jpg', '#e3d7bf', '#667354'],
             ['Jogo de toalhas. Para casal sair do banho e não molhar a casa', '', 135, 'src/4.jpeg', '#e3d7bf', '#667354'],
             ['Potes para guardar tudo. Porque aqui nada se perde.', '', 150, 'src/7.jpeg', '#e3d7bf', '#667354'],
             ['Cobertor para o noivo estar coberto de razão', '', 208, 'src/rz.png', '#efe2bf', '#b65d46'],
@@ -1818,7 +1819,7 @@
             ['Pix do amor. Pequeno para você, gigante para a nossa casa', '', 250, 'src/6.jpeg', '#e3d7bf', '#667354'],
             ['Ajuda para pagar a fatura do cartão da noiva', 'presentes', 300, 'src/noiva.png', '#edc8b7', '#b65d46'],
             ['Panelas do amor, para conquistar o noivo pela barriga', '', 350, 'src/8.jpeg', '#e3d7bf', '#667354'],
-            ['Jantar Romântico.', '', 400, 'src/Jantar.jpg', '#e3d7bf', '#667354'],
+            ['Jantar Romântico p/ o casal criar boas memorias', '', 400, 'src/Jantar.jpg', '#e3d7bf', '#667354'],
             ['Capacete para o noivo se defender do pau de macarrão', '', 500, 'src/capacete.jpeg', '#eee2c8', '#b65d46'],
             ['Ajuda para pagar a fatura do cartão do noivo', '', 600, 'src/noivo.png', '#e3d7bf', '#667354'],
             ['Primeiro lugar na fila do buffet', '', 700, 'src/buffet.jpeg', '#d5dfc2', '#54705b'],
@@ -1914,7 +1915,7 @@
                 <aside class="drawer">
                     <div class="drawer-head">
                         <div>
-                            <span class="drawer-kicker">um cantinho reservado</span>
+                            <span class="drawer-kicker">Agradeçemos pelo carinho</span>
                             <h2>Sua cesta</h2>
                         </div>
                         <button class="close" id="closeCart">×</button>
@@ -1968,9 +1969,9 @@
                         <div class="empty">
                             <div class="empty-mark">□</div>
                             <h3>A cesta está quietinha.</h3>
-                            <p>Escolha um detalhe da nossa história para levar com você.</p>
+                            <p>Escolha um presente e volte aqui</p>
                             <a class="primary" href="#loja" id="backShop">
-                                Ver a lojinha →
+                                Ver a lista de presentes →
                             </a>
                         </div>
                     `}
@@ -2017,11 +2018,11 @@
                    <div class="pix-area">
     <img src="src/qrcode.jpeg" alt="QR Code para pagamento via Pix" class="pix-qrcode">
     <h4> Chave pix: 000.081.832-10 </h4>
-    <p>Obrigado por levar um pedacinho da nossa história.</p>
+    <p>Presente escolhido com sucesso! Agora falta só você na nossa festa</p>
 </div>
 
                     <button class="primary" id="done">
-                        Voltar à lojinha →
+                        Voltar à lista →
                     </button>
                 </div>
             `;
