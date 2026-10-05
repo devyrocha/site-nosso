@@ -692,7 +692,7 @@
         }
 
         .footer em {
-            color: var(--terracotta);
+            color: var(--green);
             font: 15px var(--serif)
         }
 
@@ -1223,8 +1223,8 @@
        ========================= */
 
             .shop {
-                padding-top: 65px;
-                padding-bottom: 70px;
+                padding-top: 18px;
+                padding-bottom: 22px;
             }
 
             .shop-heading {
@@ -1275,6 +1275,16 @@
 
             .category {
                 font-size: 8px;
+            }
+
+            .endereco-evento {
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: 13px;
+                font-style: italic;
+                font-weight: 400;
+                letter-spacing: 0.3px;
+                line-height: 1.7;
+                color: #7a6758;
             }
 
             .product-name {
@@ -1791,6 +1801,24 @@
             background: #b9a18c;
         }
 
+        .hero-titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-data {
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 1.5;
+            color: inherit;
+            text-align: left;
+        }
+
+        .hero-data p {
+            margin: 0;
+        }
 
         /* cada item */
 
@@ -1879,8 +1907,17 @@
 
         @media (max-width: 600px) {
 
+
+            .hero-titulo {
+                gap: 20px;
+            }
+
+            .hero-data {
+                font-size: 13px;
+            }
+
             .roteiro {
-                padding: 45px 15px;
+                padding: 10px 15px;
             }
 
             .roteiro-papel {
@@ -1938,7 +1975,25 @@
             <section class="hero">
                 <div class="hero-copy">
                     <span class="eyebrow"><strong>CONVITE</strong></span>
-                    <h1 class="display">Chá de <em>Panela</em></h1>
+                    <br></br>
+
+
+                    <div class="hero-titulo">
+
+                        ```
+                        <div>
+                            <h1 class="display">Chá de <em>Panela</em></h1>
+                        </div>
+
+                        <div class="hero-data">
+                            <p>09.10.2026</p>
+                            <p>19h</p>
+                        </div>
+                        ```
+
+                    </div>
+
+
                     <p>Para celebrar o lar que estamos construindo juntos</p>
                     <div class="actions"><a class="primary" href="#historia">Leia nossa história →</a><a class="quiet"
                             href="#loja">Nossa lista de presentes</a>
@@ -1958,7 +2013,7 @@
             </section>
             <div class="memory">
                 <div><span>o primeiro encontro</span><strong>Um sábado ensolarado</strong></div>
-                <div><span>o lugar preferido</span><strong>Splash Pizzaria</strong></div>
+                <div><span>o lugar preferido</span><strong>Sushi Ponta Negra</strong></div>
                 <div><span>o que aprendemos</span><strong>Que o amor tudo crê...</strong></div>
             </div>
         </main>
@@ -2079,6 +2134,9 @@
                 <div>
                     <span class="eyebrow">onde vamos celebrar</span>
                     <br></br>
+                    <span class="endereco-evento">
+                        Local: Av. Frederico Baird, 2990 - Ponta Negra, Manaus - AM, 69037-144
+                    </span> <br></br>
                     <section class="location-content">
 
 
