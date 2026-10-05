@@ -954,6 +954,59 @@
 
         @media (max-width: 768px) {
 
+
+            .cart-button {
+                position: fixed;
+                right: 30px;
+                bottom: 6px;
+                z-index: 1000;
+
+                width: 54px;
+                height: 54px;
+
+                padding: 0;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: var(--card);
+                border: 1px solid rgba(56, 41, 31, 0.18);
+                box-shadow: 0 6px 20px rgba(56, 41, 31, 0.18);
+
+                cursor: pointer;
+            }
+
+            .cart-text {
+                display: none;
+            }
+
+            .cart-icon {
+                display: block;
+                font-size: 22px;
+                line-height: 1;
+            }
+
+            .cart-button .count {
+                position: absolute;
+                top: -4px;
+                right: -4px;
+
+                min-width: 20px;
+                height: 20px;
+                padding: 0 5px;
+
+                display: grid;
+                place-items: center;
+
+                border-radius: 50%;
+                background: var(--green);
+                color: white;
+
+                font-size: 10px;
+            }
+
             /* GERAL */
             html {
                 overflow-x: hidden;
@@ -1549,6 +1602,7 @@
                 color: var(--muted);
             }
 
+
             #startSite {
                 border: 1px solid var(--ink);
                 background: var(--ink);
@@ -1958,11 +2012,24 @@
 </head>
 
 <body>
+
+
+
     <div class="shell">
         <header class="header">
             <a class="brand" href="#inicio"><span class="mark">❤︎</span><span><span class="brand-name">Yuri <i>&</i>
                         Klicya</span></span></a>
+
+
+
+            <button class="cart-button" id="openCart">
+                <span class="cart-icon">🛒</span>
+                <span class="count" id="cartCount">0</span>
+            </button>
             <button class="mobile-toggle" id="menuToggle" aria-label="Abrir navegação">☰</button>
+
+
+
             <nav class="nav" id="nav"><a href="#inicio">Início</a>
                 <a href="#localizacao">Localização do Evento</a>
                 <a href="#roteiro">Roteiro da noite</a>
@@ -1970,6 +2037,7 @@
                 <a href="#historia">Nossa história</a><a href="#loja">Lista de presente</a><button class="cart-button"
                     id="openCart"><span>Cesta do casal</span><span class="count" id="cartCount">0</span></button>
             </nav>
+
         </header>
         <main id="inicio">
             <section class="hero">
@@ -1986,8 +2054,8 @@
                         </div>
 
                         <div class="hero-data">
-                            <p>Dt: 09.10.26</p>
-                            <p>Hora: 19h</p>
+                            <p>09.10.26</p>
+                            <p>19h</p>
                         </div>
                         ```
 
@@ -2327,7 +2395,7 @@
                     ` : `
                         <div class="empty">
                             <div class="empty-mark">□</div>
-                            <h3>A cesta está quietinha.</h3>
+                            <h3>A cesta está vazia.</h3>
                             <p>Escolha um presente e volte aqui</p>
                             <a class="primary" href="#loja" id="backShop">
                                 Ver a lista de presentes →
